@@ -1,17 +1,19 @@
 <template>
-  <nav class="navBar">
-    <NavBarLink msg="link 1"/>
-    <NavBarLink msg="link 2"/>
-    <NavBarLink msg="link 3"/>
-  </nav>
+  <div>
+    <nav class="navBar">
+      <router-link to="/"></router-link>
+      <router-link to="/Booking">Booking</router-link>
+      <router-link to="/Home">Home</router-link>
+    </nav>
+    <router-view/>
+  </div>
 </template>
 
 <script>
-import NavBarLink from './NavBarLink.vue'
 
 export default {
 components: {
-    NavBarLink
+
   },
   name: 'NavigationBar',
   props: {
@@ -22,8 +24,10 @@ components: {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .navBar {
-        display: flex;
-        flex-direction: row;
-    }
+  .navBar {
+    display: flex;
+    flex-direction: row;
+    background-color: #bdbdfb;
+    height: 2.5rem;
+  }
 </style>
