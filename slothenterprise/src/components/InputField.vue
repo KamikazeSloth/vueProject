@@ -22,9 +22,7 @@ export default {
   },
   methods: {
     handleChange: function ($event) {
-      this.$store.commit("changeGlobal", "New Name");
-      console.log(this.$store.state.test);
-      console.log($event.target.value);
+      this.$emit('childValue', $event.target.value)
     },
   },
 };
